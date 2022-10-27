@@ -1,0 +1,353 @@
+.pokeid-body {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+}
+
+.pokeid-topline {
+    height: 25px;
+    width: 100%;
+    background-color: #222;
+    border-top: 12px solid var(--color-red);
+    position: absolute;
+
+}
+
+
+.pokeid-buttons {
+    background-color: #ebdcdc;
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding: 5px 5px 0px 5px;
+
+}
+
+.pokeid-button-back,
+.pokeid-button-next,
+.pokeid-button-home {
+    width: 20%;
+    height: 40px;
+    max-width: 175px;
+    background-color: var(--color-red);
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    position: absolute;
+    top: 18px;
+}
+
+
+
+.pokeid-button-back {
+    left: 3%;
+    border-radius: 15px 3px 3px 15px;
+
+}
+
+.pokeid-button-next {
+    right: 3%;
+    border-radius: 3px 15px 15px 3px;
+}
+
+.pokeid-button-home {
+    background-color: green;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 3px;
+
+}
+
+.pokeid-button-back:hover,
+.pokeid-button-next:hover,
+.pokeid-button-home:hover {
+    cursor: pointer;
+}
+
+
+
+.pokeid-container {
+    width: 80%;
+    justify-self: center;
+    border: 5px solid var(--color-red);
+    border-radius: 20px;
+    margin-top: 100px;
+    padding: 5px;
+
+
+}
+
+.pokeid-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+}
+
+.pokeid-background {
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+
+
+
+
+}
+
+.pokeid-image {
+    width: 150px;
+    position: absolute;
+    transform: translateY(80px);
+}
+
+.pokeid-id {
+    box-shadow: 1px 2px 8px #222;
+    border-radius: 10px;
+    margin-top: 240px;
+    padding-left: 3px;
+    padding-right: 5px;
+    width: fit-content;
+    color: #303530;
+    font-size: 22px;
+}
+
+
+.pokeid-qualities {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 20px;
+
+
+}
+
+.pokeid-name {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: white;
+    text-shadow: 2px 0 red, -2px 0 red, 0 2px red, 0 -2px red,
+        1px 1px red, -1px -1px red, 1px -1px red, -1px 1px red;
+    font-size: 32px;
+    margin-bottom: 8px;
+
+
+}
+
+.pokeid-qualities-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    background-color: #f1bf1971;
+    padding: 5px;
+
+
+}
+
+
+.pokeid-type-abilities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+
+
+}
+
+.pokeid-type {
+    width: 95%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+
+.pokeid-type-name {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.pokeid-type-types {
+    font-size: 20px;
+}
+
+.pokeid-abilities-container {
+    background-color: rgba(206, 51, 51, 0.562);
+    width: 95%;
+    border-radius: 5px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    margin-bottom: 20px;
+
+}
+
+.pokeid-abilities-title {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.pokeid-abilities {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-transform: capitalize;
+    gap: 5%;
+
+
+}
+
+.pokeid-abilities-name {
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 18px;
+    width: fit-content;
+
+
+}
+
+
+.pokeid-stats-title {
+    font-size: 30px;
+    border-top: 5px solid red;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.progress-name {
+    text-transform: capitalize;
+    align-self: flex-start;
+    padding-left: 10%;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    display: flex;
+    width: 80%;
+    position: relative;
+    border-radius: 10px;
+    border: 3px solid rgb(255, 2, 2);
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.progress {
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    background-image: linear-gradient(270deg, #ff7d9c 0, #ff818a 6.25%, #ff8779 12.5%, #ff8e68 18.75%, #ff9659 25%, #ff9d4a 31.25%, #ffa53c 37.5%, #ffad2f 43.75%, #fab423 50%, #ebbb1a 56.25%, #dac117 62.5%, #c9c71c 68.75%, #b6cc27 75%, #a2d034 81.25%, #8dd442 87.5%, #74d752 93.75%, #56da63 100%);
+
+}
+
+.error-id {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+.error-not-found {
+    font-size: 30px;
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.error-return {
+    background-color: rgba(255, 0, 0, 0.418);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.error-return-pokedex:hover,
+.error-return-home:hover {
+    cursor: pointer;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* -------------------media -------------------------*/
+@media (min-width: 440px) {
+
+    .pokeid-button-back,
+    .pokeid-button-next,
+    .pokeid-button-home {
+        font-size: 25px;
+    }
+
+
+    .pokeid-image {
+
+        width: 170px;
+    }
+
+    .pokeid-id {
+        margin-top: 260px;
+    }
+
+}
+
+
+
+
+
+@media (min-width: 640px) {
+
+    .pokeid-type-name {
+        font-size: 25px;
+    }
+
+    .pokeid-abilities-title {
+        font-size: 23px;
+    }
+
+    .pokeid-abilities {
+        gap: 20%;
+    }
+
+    .pokeid-abilities-name {
+
+        font-size: 22px;
+    }
+
+    .pokeid-image {
+
+        width: 230px;
+        transform: translateY(40px);
+
+    }
+
+    .pokeid-id {
+        margin-top: 280px;
+    }
+
+    .pokeid-name {
+        font-size: 50px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+}

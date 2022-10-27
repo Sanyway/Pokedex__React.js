@@ -1,0 +1,476 @@
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-poke {
+    max-width: 100%;
+    max-width: 400px;
+    border-radius: 30px;
+    border: 10px solid rgb(255, 46, 46);
+    background-color: rgb(210, 234, 250);
+    margin: 20px;
+}
+
+.card-poke:hover {
+    cursor: pointer;
+}
+
+.card-poke-header {
+    height: 200px;
+    background-color: green;
+    position: relative;
+    margin-bottom: 50px;
+    border-top-right-radius: 17px;
+    border-top-left-radius: 17px;
+    
+    
+
+}
+
+.card-poke-sprite {
+    width: 50%;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card-poke-body {
+    margin-bottom: 30px;
+}
+
+.card-poke-name {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 29px;
+
+}
+
+.card-poke-types-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    
+}
+
+.card-poke-type {
+    font-size: 17px;
+    text-transform: capitalize;
+    position: relative;
+    font-weight: 600;
+}
+
+.card-poke-type:nth-child(2)::before {
+    content: '/';
+    position: absolute;
+    left: -10px;
+    font-weight: 900;
+}
+
+.card-poke-type-label {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.card-poke-stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 5px;
+    justify-content: center;
+    padding: 0 5px 35px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.card-poke-stat {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.card-poke-stat-label {
+    color: #999;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.card-poke-stat-number {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+/* ------------------------------   dinamic color cards --------------------   */
+
+
+
+/* Grass Type */
+
+.border-grass {
+    border-color: #58cc77;
+}
+
+.bg-grass {
+    background: linear-gradient(178.92deg, #7EC6C5 0.92%, #2b7252 57.96%, #338561 99.08%);
+   
+}
+
+
+.letter-grass {
+    color: #416460;
+}
+
+/* Fire Type */
+
+.border-fire {
+    border-color: #E75C35;
+}
+
+.bg-fire {
+    background: linear-gradient(176.37deg, #e5ff86 -32.26%, #E35825 57.55%, #e9a71a 125.72%);
+    
+}
+
+
+.letter-fire{
+    color: #E75C35;
+}
+
+/* Water Type */
+
+.border-water {
+    border-color: #4187e4;
+}
+
+.bg-water {
+    background: linear-gradient(179.57deg, #133258 -10.14%, #1479FB 50.16%, #0f1d30 130.85%);
+    
+}
+
+
+.letter-water {
+    color: #1479FB;
+}
+
+/* Bug Type */
+
+.border-bug {
+    border-color: #4AB648;
+}
+
+.bg-bug {
+    background: linear-gradient(177.56deg, #a5fd00 -58.92%, #60961b 37.57%, #AAFFA8 130.53%);
+    
+}
+
+
+.letter-bug {
+    color: #4AB648;
+}
+
+/* Normal Type */
+
+.border-normal {
+    border-color: #573c42;;
+}
+
+.bg-normal {
+    background: linear-gradient(181.51deg, #4b2730 -11.44%, #c4929d 53.95%, #4b2029 170.11%);
+    
+}
+
+
+.letter-normal {
+    color: #735259;
+}
+
+/* Fighting Type */
+
+.border-fighting {
+    border-color: #96402A;
+}
+
+.bg-fighting {
+    background: linear-gradient(176.83deg, #a01414 -8.78%, #fc4727 55.09%, #070201 130.33%);
+    
+}
+
+
+.letter-fighting {
+    color: #96402A;
+}
+
+/* Ground Type */
+
+.border-ground {
+    border-color: #654008;
+}
+
+.bg-ground {
+    background: linear-gradient(179.75deg, #422b07 -11.96%, #e99f29 52.67%, #0c0801 138.4%);
+    
+}
+
+
+.letter-ground {
+    color: #654008;
+}
+
+/* Rock Type */
+
+.border-rock {
+    border-color: #6e6c6c
+    ;
+}
+
+.bg-rock {
+    background: linear-gradient(177.03deg, #524b4b -11.97%, #b7b7c9 45.49%, #332a2a 135.64%);
+    
+}
+
+
+.letter-rock {
+    color: #6e6c6c;
+}
+
+/* Ghost Type */
+
+.border-ghost {
+    border-color: #323569;
+}
+
+.bg-ghost {
+    background: linear-gradient(177.03deg, #323569 30.97%, #b6b8d6 55.49%, #787DDA 135.64%);
+    
+}
+
+
+.letter-ghost {
+    color: #323569;
+}
+
+/* Electric Type */
+
+.border-electric {
+    border-color: #0C1395;
+}
+
+.bg-electric {
+    background: linear-gradient(179.75deg, #c41aca -19.96%, #b29ac5 43.67%, #12132c 138.4%);
+    
+}
+
+
+.letter-electric {
+    color: #0C1395;
+}
+
+
+/* Psychic Type */
+
+.border-psychic {
+    border-color: #7c227c;
+}
+
+.bg-psychic {
+    background: linear-gradient(179.75deg, #540a57 10.96%, #f132d2 55.67%, #5a0d4d 138.4%);
+    
+}
+
+
+.letter-psychic {
+    color: #7c227c;
+}
+
+/* Ice Type */
+
+.border-ice {
+    border-color: #6FBEDF;
+}
+
+.bg-ice {
+    background: linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%);
+    
+}
+
+
+.letter-ice {
+    color: #5494af;
+}
+
+/* Dark Type */
+
+.border-dark {
+    border-color: #030706;
+}
+
+.bg-dark {
+    background: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%);
+    
+}
+
+
+.letter-dark {
+    color: #030706;
+}
+
+/* Poison Type */
+
+.border-poison{
+    border-color: #030706;
+}
+
+.bg-poison{
+    background: linear-gradient(177.03deg, #3cff46 -11.97%, #f11860 50.49%, #000000 80.64%);
+    
+}
+
+
+.letter-poison{
+    color: #030706;
+}
+
+/* Dragon Type */
+
+.border-dragon {
+    border-color: #ad8120;
+}
+
+.bg-dragon {
+    background: linear-gradient(177.03deg, #3a2817 -11.97%, #945a20 57.49%, #f5dc01 135.64%);
+    
+}
+
+
+.letter-dragon {
+    color: #8b691d;
+}
+
+/* Fairy Type */
+
+.border-fairy {
+    border-color: #971B45;
+}
+
+.bg-fairy {
+    background: linear-gradient(179.75deg, #f0a0ba -11.96%, #c0197a 57.67%, #290b14 138.4%);
+    
+}
+
+
+.letter-fairy {
+    color: #971B45;
+}
+
+
+
+@media (max-width: 1680px) {
+    .card-poke {
+       width: 300px;
+       height: 450px;
+    }
+    
+    .card-poke-header {
+    height: 120px;
+    margin-bottom: 50px;
+    }
+    
+    .card-poke-sprite {
+       width: 110px;
+    }
+    
+    
+    .card-poke-name {
+       
+    font-size: 28px;
+    }
+    
+    
+    .card-poke-type {
+        font-size: 16px;
+    }
+    
+    
+    .card-poke-type-label {
+     font-size: 15px;
+     margin-bottom: 20px;
+    }
+    
+
+    
+    .card-poke-stat-label {
+        font-size: 15px;
+    }
+    
+    .card-poke-stat-number {
+       font-size: 15px; 
+       font-weight: 600;
+    }
+    
+   
+}
+
+
+
+@media (max-width: 1025px) {
+    .card-poke {
+       width: 230px;
+       height: 350px;
+    }
+    
+    .card-poke-header {
+    height: 120px;
+    margin-bottom: 10px;
+    }
+    
+    .card-poke-sprite {
+       width: 80px;
+    }
+    
+    
+    .card-poke-name {
+       
+    font-size: 20px;
+    }
+    
+    
+    .card-poke-type {
+        font-size: 13px;
+    }
+    
+    
+    .card-poke-type-label {
+     font-size: 12px;
+     margin-bottom: 10px;
+    }
+    
+
+    
+  
+    
+    .card-poke-stat-label {
+        font-size: 12px;
+    }
+    
+    .card-poke-stat-number {
+       font-size: 15px; 
+    }
+    
+   
+}
