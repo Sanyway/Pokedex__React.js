@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './styles/cardPoke.css'
 
-const CardPoke = ({ url, CurrentPoke }) => {
+const CardPoke = ({ url }) => {
 
   const [pokemon, setPokemon] = useState()
   useEffect(() => {

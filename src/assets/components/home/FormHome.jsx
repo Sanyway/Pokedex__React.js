@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { setUserNameGlobal } from '../../../store/slices/userName.slice'
 
@@ -10,8 +10,8 @@ const FormHome = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const [balloon, setBalloon] = useState(false)
-  const initialId = useSelector(state => state.initialId)
-  console.log(initialId)
+  
+  
 
 
   const submit = (e) => {
@@ -27,8 +27,8 @@ const FormHome = () => {
 
   return (
     <form className='pokedex-form' onSubmit={submit} type='text'>
-      <div class={`form-arrow-init ${balloon ? 'form-arrow-show' : 'form-arrow-hide'}`}>
-        <p class="form-balloon-init">¡Please enter your name to begin!</p>
+      <div className={`form-arrow-init ${balloon ? 'form-arrow-show' : 'form-arrow-hide'}`}>
+        <p className="form-balloon-init">¡Please enter your name to begin!</p>
       </div>
       <input className='pokedex-input' placeholder='Enter your name here' type="text" id='pokedexinput' />
       <button className='pokedex-btn'>Catch them all!</button>

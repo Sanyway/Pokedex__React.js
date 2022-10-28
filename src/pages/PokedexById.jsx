@@ -12,7 +12,7 @@ const PokedexById = () => {
   const { id } = useParams()
   const initialId = useSelector(state => state.initialId)
   const navigate = useNavigate()
-  const ids = Number(id)
+ 
   const [pokemon, setPokemon] = useState()
   const [hasError, setHasError] = useState(false)
 
@@ -25,6 +25,10 @@ const PokedexById = () => {
         console.log(err)
       })
   }, [id])
+
+  const ids = pokemon?.id
+
+ 
 
   const handlePrev = () => {
     navigate(`/pokedex/pages/pokemon/${ids - 1}`)
@@ -81,7 +85,7 @@ const handleNext = () => {
             <div className='pokeid-abilities'>
             {
               pokemon?.abilities.map(ability => (
-                <h2 className='pokeid-abilities-name'>{ability.ability.name}</h2>
+                <h2 key={ability.ability.name} className='pokeid-abilities-name'>{ability.ability.name}</h2>
               ))
             }
             </div>
@@ -93,11 +97,12 @@ const handleNext = () => {
           <div>
             {
               pokemon?.stats.map(stat => (
-                <div className='progress-container'>
+                
+                <div key={stat.stat.name} className='progress-container'>
                   <h2 className='progress-name'>{stat.stat.name}:</h2>
 
-                  <div class="progress-bar">
-                    <div class={`progress `} style={{ width: `${stat.base_stat}%` }}> </div>
+                  <div className="progress-bar">
+                    <div className={`progress `} style={{ width: `${stat.base_stat}%` }}> </div>
                     <h3>{stat.base_stat}%</h3>
                   </div>
                 </div>

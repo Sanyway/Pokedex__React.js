@@ -75,13 +75,6 @@ const Pokedex = () => {
   }, [id])
 
 
-
-
-  console.log(page)
-  console.log(initialId)
-  console.log(id)
-
-
   const pokePerPage = 8
   const initialPoke = (page - 1) * pokePerPage
   const finalPoke = page * pokePerPage
