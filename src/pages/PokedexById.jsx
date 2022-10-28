@@ -53,7 +53,7 @@ const handleNext = () => {
       <div className='pokeid-topline'></div>
 <div className='pokeid-buttons'>
   <button onClick={handlePrev} className='pokeid-button-back'>Prev</button>
-  <button onClick={handleHome} className='pokeid-button-home'>Home</button>
+  <button onClick={handleHome} className='pokeid-button-home'>Back to Pokedex</button>
   <button onClick={handleNext} className='pokeid-button-next'>Next</button>
 </div>
       <div className='pokeid-container'>
