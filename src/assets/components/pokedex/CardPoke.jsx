@@ -10,9 +10,7 @@ const CardPoke = ({ url }) => {
   useEffect(() => {
     axios.get(url)
       .then(res => {
-        setTimeout(() => {
           setPokemon(res.data);
-        }, 2000); 
       })
       .catch(err => console.log(err));
   }, []);
