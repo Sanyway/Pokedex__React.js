@@ -13,14 +13,27 @@
     margin: 20px;
 }
 
+.loader {
+    max-width: 100%;
+    max-width: 400px;
+    border-radius: 30px;
+    border: 10px solid rgb(255, 46, 46);
+    background-color: rgb(210, 234, 250);
+    margin: 20px; 
+}
+
+.img-loader {
+    border-radius: 20px;
+}
+
 .card-poke:hover {
     cursor: pointer;
 }
 
 .card-poke-header {
     height: 200px;
-    background-color: green;
     position: relative;
+    
     margin-bottom: 50px;
     border-top-right-radius: 17px;
     border-top-left-radius: 17px;
@@ -385,6 +398,12 @@
        width: 300px;
        height: 450px;
     }
+
+    .loader {
+        width: 300px;
+       height: 450px;
+    }
+    
     
     .card-poke-header {
     height: 120px;
@@ -433,6 +452,12 @@
        width: 230px;
        height: 350px;
     }
+
+    .loader {
+        width: 230px;
+       height: 350px;
+    }
+    
     
     .card-poke-header {
     height: 120px;

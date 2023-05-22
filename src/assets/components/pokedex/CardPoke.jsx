@@ -2,21 +2,27 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './styles/cardPoke.css'
+import gif from '../../../images/loader.gif'
 
 const CardPoke = ({ url }) => {
 
   const [pokemon, setPokemon] = useState()
   useEffect(() => {
     axios.get(url)
-      .then(res => setPokemon(res.data))
-      .catch(err => console.log(err))
-  }, [])
+      .then(res => {
+        setTimeout(() => {
+          setPokemon(res.data);
+        }, 2000); 
+      })
+      .catch(err => console.log(err));
+  }, []);
 const navigate = useNavigate()
 
    const handleClick = () => {
     navigate(`/pokedex/pages/pokemon/${pokemon.id}`)
    }
-
+ 
+   if(pokemon){
   return (
     <article className={`card-poke border-${pokemon?.types[0].type.name}`} onClick={handleClick}>
       <header className={`card-poke-header bg-${pokemon?.types[0].type.name}`}>
@@ -48,6 +54,13 @@ const navigate = useNavigate()
       </section>
     </article>
   )
+} else {
+return (
+  <article className='loader'>
+  <img className='img-loader' src={gif} alt="Loader" />
+  </article>
+)
+}
 }
 
 export default CardPoke
