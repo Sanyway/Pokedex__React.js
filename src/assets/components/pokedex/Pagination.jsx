@@ -57,24 +57,17 @@ const Pagination = ({ page, pagesLength,allPokemons }) => {
     }, [pagesLength])
 
   
-    /*console.log(page)
-    console.log(currentBlock)
-    console.log(pagesLength)
-    console.log(pagesPerBlock)
-    console.log(arrPages.length)*/
-    
-  
 
     
 
 
     return (
         <div className='pagination'>
-            {pages > 8 &&
-                <div onClick={handlePrevPage} className='pagination-prev pagination-active'>&#60;&#60;</div>
+            {pages > 8 ?
+                <div onClick={handlePrevPage} className='pagination-prev pagination-active'>&#60;&#60;</div> : <div className='pagination-prev pagination-inactive'>&#60;&#60;</div>
             }
-            {pages > 1 &&
-                <div onClick={handlePrev} className='pagination-prev pagination-active'>&#60;</div>
+            {pages > 1 ?
+                <div onClick={handlePrev} className='pagination-prev pagination-active'>&#60;</div> : <div className='pagination-prev pagination-inactive'>&#60;</div> 
             }
 
             <ul className='pagination-container'>
@@ -84,11 +77,11 @@ const Pagination = ({ page, pagesLength,allPokemons }) => {
                     ))
                 }
             </ul>
-            {pages < pagesLength &&
-                <div onClick={handleNext} className='pagination-next pagination-active'>&#62;</div>
+            {pages < pagesLength ?
+                <div onClick={handleNext} className='pagination-next pagination-active'>&#62;</div> : <div className='pagination-next pagination-inactive'>&#62;</div> 
             }
-            {pages < pagesLength &&
-                <div onClick={handleNextPage} className='pagination-prev pagination-active'>&#62;&#62;</div>
+            {pages < pagesLength ?
+                <div onClick={handleNextPage} className='pagination-prev pagination-active'>&#62;&#62;</div> :  <div className='pagination-prev pagination-inactive'>&#62;&#62;</div>
             }
 
         </div>
